@@ -1,5 +1,7 @@
+var lang = 'hr';
+
 document.addEventListener( "DOMContentLoaded", function() {
-    const API_ROOT = "https://en.wikipedia.org/w/api.php",
+    const API_ROOT = "https://" + lang + ".wikipedia.org/w/api.php",
           API_SUFFIX = "&format=json&callback=?&continue=",
           EDIT_COUNT_THRESHOLD = 10000;
 
@@ -112,7 +114,7 @@ document.addEventListener( "DOMContentLoaded", function() {
      * Makes a <td> with all sorts of fun links.
      */
     function makeUserCell ( username ) {
-        return "<td><a href='https://en.wikipedia.org/wiki/User:" + username + "' title='Wikipedia user page of " + username + "'>" + username + "</a> (<a href='https://en.wikipedia.org/wiki/User talk:" + username + "' title='Wikipedia user talk page of " + username + "'>talk</a> &middot; <a href='https://en.wikipedia.org/wiki/Special:Contributions/" + username + "' title='Wikipedia contributions of " + username + "'>contribs</a>)</td>";
+        return "<td><a href='https://" + lang + ".wikipedia.org/wiki/User:" + username + "' title='Wikipedia user page of " + username + "'>" + username + "</a> (<a href='https://" + lang + ".wikipedia.org/wiki/User talk:" + username + "' title='Wikipedia user talk page of " + username + "'>talk</a> &middot; <a href='https://" + lang + ".wikipedia.org/wiki/Special:Contributions/" + username + "' title='Wikipedia contributions of " + username + "'>contribs</a>)</td>";
     }
 
     // Utility functions
